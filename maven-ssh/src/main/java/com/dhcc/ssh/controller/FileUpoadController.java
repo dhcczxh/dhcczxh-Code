@@ -28,7 +28,7 @@ public class FileUpoadController {
 					e.printStackTrace();
 				}
 	           //在这里就可以对file进行处理了，可以根据自己的需求把它存到数据库或者服务器的某个文件夹  
-	           return "redirect:uploadSuccess.jsp";  
+	           return "redirect:uploadSuccess1.jsp";  
 	       } else {  
 	           return "redirect:uploadFailure.jsp";  
 	       }  
