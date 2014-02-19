@@ -20,8 +20,6 @@ public class FileUpoadController {
 	 @RequestMapping(value = "/formUpload", method = RequestMethod.POST)  
 	    public String handleFormUpload(  
 	        @RequestParam("file")  MultipartFile file) { 
-		  // System.out.println(fileName);
-	        //MultipartFile是对当前上传的文件的封装，当要同时上传多个文件时，可以给定多个MultipartFile参数  
 	        if (!file.isEmpty()) {  
 	            try {
 					byte[] bytes = file.getBytes();
