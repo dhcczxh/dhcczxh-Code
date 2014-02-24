@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import com.dhcc.ssh.service.IUserService;
 
 /**
@@ -21,13 +20,14 @@ public class LoginController {
 	
 	@Autowired
 	private IUserService userService;
-    @RequestMapping("/hanndleRequest")
+	
     //也可以用@ModleAndAttribute设置与entity与页面参数绑定
+    @RequestMapping("/hanndleRequest")
 	public ModelAndView handleRequest(@RequestParam("userName") String userName , @RequestParam("userPassword") String userPassword) throws Exception {
 		// TODO Auto-generated method stub
-	
 		ModelAndView mav=null;  
 		mav = new ModelAndView();
+		
 		try{
 			
 			boolean bool = userService.verifyUserByUserNameAndPassword(userName, userPassword);
