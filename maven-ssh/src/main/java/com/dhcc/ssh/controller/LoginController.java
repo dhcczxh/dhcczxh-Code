@@ -21,7 +21,6 @@ public class LoginController {
 	@Autowired
 	private IUserService userService;
 	
-    //也可以用@ModleAndAttribute设置与entity与页面参数绑定
     @RequestMapping("/hanndleRequest")
 	public ModelAndView handleRequest(@RequestParam("userName") String userName , @RequestParam("userPassword") String userPassword) throws Exception {
 		// TODO Auto-generated method stub
